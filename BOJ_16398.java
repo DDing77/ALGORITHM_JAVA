@@ -35,8 +35,8 @@ public class BOJ_16398 {
 	}
 
 	static boolean union(int x, int y) {
-		x = parent[x];
-		y = parent[y];
+		x = find(x);
+		y = find(y);
 		if (x == y)
 			return false;
 		if (x < y) {
