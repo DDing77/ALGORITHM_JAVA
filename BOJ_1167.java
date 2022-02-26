@@ -23,7 +23,7 @@ public class BOJ_1167 {
 
 	static ArrayList<Node>[] list;
 
-	static int node;
+	static int node = 0;
 	static int max = 0;
 
 	static void DFS(int idx, int dist) {
@@ -59,13 +59,10 @@ public class BOJ_1167 {
 				if (end == -1) break;
 				list[start].add(new Node(end, Integer.parseInt(st.nextToken())));
 			}
-
-			DFS(1, 0);
-			isVisited = new boolean[N + 1];
-			DFS(node, 0);
-
-			
 		}
+		DFS(1, 0);
+		isVisited = new boolean[N + 1];
+		DFS(node, 0);
 		System.out.println(max);
 	}
 }
